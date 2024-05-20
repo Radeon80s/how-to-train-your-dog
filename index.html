@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A simple site about dogs">
+    <meta name="keywords" content="dogs, training, pets, how to train your dog">
+    <meta name="author" content="Sotiris">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Train Your Dog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#autocomplete-section">Dog Breeds</a></li>
+                <li><a href="#calculator-section">Dog Age Calculator</a></li>
+                <li><a href="#video-section">Training Video</a></li>
+                <li><a href="#youtube-section">YouTube Video</a></li>
+                <li><a href="#interactive-section">Dog Facts</a></li>
+                <li><a href="#social-section">Social</a></li>
+            </ul>
+        </nav>
+        <div id="datetime"></div>
+        <p id="greeting"></p>
+    </header>
+
+    <main>
+        <section class="content-section" id="autocomplete-section">
+            <h2>Dog Breeds</h2>
+            <input list="breeds" name="breed" id="breedInput" placeholder="Choose a dog breed">
+            <datalist id="breeds">
+                <option value="Labrador Retriever">
+                <option value="German Shepherd">
+                <option value="Golden Retriever">
+                <option value="Bulldog">
+                <option value="Beagle">
+                <option value="Poodle">
+                <option value="Rottweiler">
+                <option value="Yorkshire Terrier">
+                <option value="Boxer">
+                <option value="Dachshund">
+            </datalist>
+        </section>
+
+        <section class="content-section" id="calculator-section">
+            <h2>Dog Age Calculator</h2>
+            <label for="dogAge">Enter your dog's age in years:</label>
+            <input type="number" id="dogAge" placeholder="Dog's age in years">
+            <button onclick="calculateDogAge()">Calculate in Human Years</button>
+            <p id="humanAge"></p>
+        </section>
+
+        <section class="content-section" id="video-section">
+            <h2>Training Video</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="content-section" id="youtube-section">
+            <h2>YouTube Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jFMA5ggFsXU" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section class="content-section" id="interactive-section">
+                <h2>Dog Facts</h2>
+                <button onclick="showPopup()">Click me for a dog fact</button>
+            </section>
+
+        <section class="content-section" id="social-section">
+            <h2>Social Connection</h2>
+            <div id="fb-root"></div>
+            <div class="fb-share-button" 
+                 data-href="https://www.facebook.com/groups/dogtrainingadviceandsupport/" 
+                 data-layout="button_count">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Sotiris Konstantinou</p>
+    </footer>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" 
+            nonce="QpYwzV4Q">
+    </script>
+</body>
+</html>
